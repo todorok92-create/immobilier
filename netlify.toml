@@ -1,0 +1,39 @@
+# ============================================================
+#  Configuration Netlify — AZUR IMMOBILIER
+#  Site 100 % statique : aucun build, publication directe.
+# ============================================================
+
+[build]
+  publish = "."
+
+# Bloquer l'accès public aux données locales de l'éditeur
+# (utile en déploiement glisser-déposer ; inutile via git car .freebuff est ignoré)
+[[redirects]]
+  from = "/.freebuff/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+# Page unique : toute route inconnue renvoie à l'accueil.
+# Les fichiers existants (css, js, assets…) restent prioritaires sur cette règle.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Cache long : les médias ne changent qu'avec un redéploiement
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache court pour le code (revalidé après chaque déploiement)
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"

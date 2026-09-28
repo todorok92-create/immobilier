@@ -1,0 +1,9 @@
+# Données locales de l'éditeur (ne jamais publier)
+.freebuff/
+
+# Artefacts locaux
+scripts/serve.pid
+
+# Système
+Thumbs.db
+.DS_Store
