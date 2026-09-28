@@ -1,5 +1,7 @@
 # AZUR IMMOBILIER — Site de présentation immobilier
 
+> 🌐 **Sites en ligne :** [todorok92-create.github.io/immobilier](https://todorok92-create.github.io/immobilier/) (GitHub Pages) · [azur-immobilier.netlify.app](https://azur-immobilier.netlify.app/) (Netlify)
+>
 > 🚀 **Pour mettre le site en ligne**, suivez le guide pas à pas :
 > [`DEPLOIEMENT.md`](DEPLOIEMENT.md) (Netlify ou GitHub Pages, vérification pré-déploiement incluse).
 

@@ -54,6 +54,13 @@ se fait en redéposant le dossier à la main. Pour un flux continu, utilisez A2.
 
 ## Option B — GitHub Pages
 
+> **✅ STATUT (28/09/2026) — DÉJÀ DÉPLOYÉ**
+> Dépôt : `https://github.com/todorok92-create/immobilier` (public)
+> Site en ligne : **https://todorok92-create.github.io/immobilier/**
+> Pages actif sur la branche `main` (racine). Push de 215 Mo effectué avec
+> `http.postBuffer = 524288000` (voir plus bas). Les URL ci-dessous sont donc
+> opérationnelles ; redéployer = simplement `git push` sur `main`.
+
 GitHub Pages sert le site depuis **`https://<votre-pseudo>.github.io/<nom-du-depot>/`**
 — les chemins du site étant tous relatifs, **aucune modification du code n'est
 requise**. Le fichier `.nojekyll` déjà présent désactive le traitement Jekyll
@@ -74,6 +81,15 @@ pourraient être transformés).
    git push -u origin main
    ```
    `.gitignore` exclut déjà `.freebuff/` et `scripts/serve.pid`.
+
+   > **Astuce (vérifiée) :** avec ~215 Mo de médias, un premier push peut
+   > échouer en `HTTP 408` / `unexpected disconnect`. Augmentez le buffer
+   > avant de relancer :
+   > ```bash
+   > git config http.postBuffer 524288000
+   > git config http.lowSpeedLimit 1000
+   > git config http.lowSpeedTime 300
+   > ```
 
 ### B1. Via GitHub Actions (recommandé)
 
