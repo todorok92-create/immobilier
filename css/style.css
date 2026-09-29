@@ -136,6 +136,12 @@ button { font: inherit; cursor: pointer; }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
 
 .brand { display: inline-flex; align-items: center; gap: 0.7rem; color: var(--white); transition: color 0.4s; }
+.brand img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex: none;
+}
 .brand-mark { width: 34px; height: 34px; color: var(--sand); flex: none; }
 .brand-name { font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; letter-spacing: 0.01em; }
 .brand-thin { font-weight: 400; opacity: 0.85; }
@@ -601,6 +607,7 @@ html.js .gallery-item.in-view { opacity: 1; transform: none; }
   .lb-prev { left: 0.5rem; }
   .lb-next { right: 0.5rem; }
   .intro-badge { position: static; margin-top: -2.4rem; margin-left: 1rem; width: fit-content; }
+  .brand img { width: 40px; height: 40px; }
 }
 
 /* ==========================================================================
